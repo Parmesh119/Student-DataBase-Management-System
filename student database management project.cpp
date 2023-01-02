@@ -5,13 +5,12 @@
 #include <conio.h>
 #include <iomanip>
 using namespace std;
-int main()
-{
+
+int main() {
     FILE *fp, *ft;
     char another, choice;
 
-    struct student
-    {
+    struct student {
         char first_name[50], last_name[50];
         char course[100];
         int section;
@@ -23,12 +22,10 @@ int main()
 
     fp=fopen("users.txt","rb+");
 
-    if (fp == NULL)
-    {
+    if (fp == NULL) {
         fp = fopen("users.txt","wb+");
 
-        if (fp==NULL)
-        {
+        if (fp==NULL) {
             puts("Cannot open file");
             return 0;
         }
@@ -37,8 +34,7 @@ int main()
 
     recsize = sizeof(e);
 
-    while(1)
-    {
+    while(1) {
         system("cls");
 
         cout << "\t\t====== STUDENT DATABASE MANAGEMENT SYSTEM ======";
@@ -56,7 +52,7 @@ int main()
         switch(choice)
         {
         case '1' :
-            fseek(fp,0,SEEK_END);
+            f
             another ='Y';
             while(another == 'Y' || another == 'y')
             {
